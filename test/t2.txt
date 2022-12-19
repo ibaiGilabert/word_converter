@@ -1,0 +1,14 @@
+ three hundred and forty-two.
+
+seventy-three thousand.  three.
+seventy-three thousand three.
+forty-two hundred.
+Three literals in a row: seventy three four. Cool value: Four Thousand, fIve hundRed sixTy-seVen.
+Forty-Two. tHrEe HUNDRED.
+
+One compound literal followed by an arity-one literal -> Forty-Two three hundred.
+A couple literals: three two Hundred.
+seventeen-ten bad. seventeen-ten bad. seventeen ten good. nine-fifteen bad. nine fifteen good.
+twelve thirty... I mean, Twelve, Thirty.
+
+To sum up, let's see the value of 2^16 [pow(two, sixteen)] power: sixty-five thousand, five hundred and thirty-six. Nice.
