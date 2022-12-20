@@ -1,6 +1,7 @@
 #ifndef TEXTVALUE_H
 #define TEXTVALUE_H
 
+#include <sstream>
 #include <memory>
 #include <regex>
 #include <map>

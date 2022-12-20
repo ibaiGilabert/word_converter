@@ -18,7 +18,9 @@ Converts all numbers English written into digits of the provided text.
 * TextValue is the class in charge of converting text numbers to their values from data received. To carry this task out, it implements a small state machine to identify the written numbers. They are 3 states to identify literal numbers, multiplier factors and connection words/characters in between. The states are defined following the singleton pattern since there is no reason to have multiple instance alive. A given state just defines a workflow, a behavior.
 * We are following some of the rules defined [Grammar Book](https://www.grammarbook.com/numbers/numbers.asp). However, there is still to much work to do. The negative and decimal numbers are not supported, to mention just a few.
 
-* The TextValue class could be also implemented as an interface. In that way, we will be able to add/change the translation module's behavior following a 'Plug&Play' philosophy. Notice that no code changes in Translator's class would be required. 
+* The TextValue class could be also implemented as an interface. In that way, we will be able to add/change the translation module's behavior following a 'Plug&Play' philosophy. Therefore, no code changes in Translator's class would be required. 
+
+* Notice the main thread is doing nothing remarkable. It justs parse the command line arguments and starts up the translator. It is a deliberate decision in order to be able to add, for instance, some kind of GUI on top or any other component which may require a full responsive interaction.
 
 * The approach we follow is based on code's maintenance and scalability taking the advantage of:
 	1.	Using design patterns to decouple components.
@@ -36,8 +38,9 @@ $cmake ..
 ```
 Then, build the compile's command depending on the toolchain you prefer. The application has been tested under these platforms:
 
-* MinGW 11.2.0 (Windows 10)
-* g++ 9.4.0 (Ubuntu 20.04.5)
+* MinGW 11.2.0 (Windows 10).
+* g++ 9.4.0 (Ubuntu 20.04.5).
+* clang 13.0.0 (macOS 11.6.7).
 
 Please, just make sure you have a compìler c++20 compliant.
 
