@@ -43,13 +43,13 @@ private:
     {
         for (unsigned int i = 0; i < numThreads; ++i)
         {
-            mThreads.emplace_back([=, this] {
+            mThreads.emplace_back([=] {
                 while (true)
                 {
                     Task task;
                     {
                         std::unique_lock<std::mutex> lock{mEventMutex};
-                        mEventVar.wait(lock, [=, this] {
+                        mEventVar.wait(lock, [=] {
                             return mStopping || !mTasks.empty();
                         });
 

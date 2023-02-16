@@ -1,3 +1,6 @@
 #files to ignore 
 CMakeLists.txt.user
 build/
+.idea/
+cmake-build*
+

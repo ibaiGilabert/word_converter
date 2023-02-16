@@ -31,7 +31,8 @@ void Translator::Run()
 
     // Bind process threads
     mThreads.resize(mInputList.size());
-    for (unsigned int i = 0; auto& input : mInputList)  // (c++20) range-based loop with initializer : )
+    unsigned int i = 0;
+    for (auto& input : mInputList)  // (c++20) range-based loop with initializer : )
     {
         mThreads[i++] = std::thread(&Translator::ProcessInput, this, input.get());
     }

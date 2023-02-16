@@ -5,7 +5,7 @@
 
 #include "tclap/CmdLine.h"  // third-party library to parse command line arguments
 
-#include <filesystem>
+#include <experimental/filesystem>
 #include <iostream>
 
 int main(int argc, char **argv)
@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 
         // get the input file
         std::string inputFile = cmdInputFile.getValue();
-        if (!std::filesystem::exists(inputFile)) {
+        if (!std::experimental::filesystem::exists(inputFile)) {
             std::cerr << "[ERROR] input file <" << inputFile << "> does not exist." << std::endl;
             return 0;
         }
